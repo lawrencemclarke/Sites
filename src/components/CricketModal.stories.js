@@ -18,19 +18,3 @@ Default.args = {
         updatedAt: new Date(2021, 0, 1, 9, 0),
     },
 };
-
-export const Pinned = Template.bind({});
-Pinned.args = {
-    modal: {
-        ...Default.args.modal,
-        state: 'Modal_PINNED',
-    },
-};
-
-export const Archived = Template.bind({});
-Archived.args = {
-    modal: {
-        ...Default.args.modal,
-        state: 'Modal_ARCHIVED',
-    },
-};

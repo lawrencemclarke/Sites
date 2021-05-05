@@ -1,5 +1,35 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`Storyshots Modal Archived 1`] = `
+<div>
+  <button
+    onClick={[Function]}
+  >
+    Test Modal
+  </button>
+</div>
+`;
+
+exports[`Storyshots Modal Default 1`] = `
+<div>
+  <button
+    onClick={[Function]}
+  >
+    Test Modal
+  </button>
+</div>
+`;
+
+exports[`Storyshots Modal Pinned 1`] = `
+<div>
+  <button
+    onClick={[Function]}
+  >
+    Test Modal
+  </button>
+</div>
+`;
+
 exports[`Storyshots Task Archived 1`] = `
 <div
   className="list-item TASK_ARCHIVED"

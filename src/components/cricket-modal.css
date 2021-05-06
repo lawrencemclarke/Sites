@@ -26,18 +26,66 @@
     margin: 10% auto;
 }
 
-.modal-trigger{
+.modal-trigger {
     padding: 1rem;
     border-radius: 20px;
 }
 
-.cricket-modal{
+.modal-backdrop {
+    background: #60A630 !important;
+    opacity: 0.8 !important;
+}
+
+.cricket-modal {
     border-radius: 5px;
     box-shadow: 0 0 5px 0 rgba(64, 64, 65, 0.5);
     width: 494px;
-    height: 489px;
+    max-height: 500px;
     position: absolute;
     left: 50%;
     top: 50%;
     transform: translate(-50%, -50%);
+    padding: 20px 30px 20px 20px;
+    overflow: hidden;
+    background: #ffffff;
+}
+
+.cricket-modal-header {
+    display: grid;
+    grid-auto-flow: column;
+    grid-auto-columns: 90% 10%;
+    height: 35px;
+    border: 0 !important;
+    height: 50px;
+}
+
+.modal-close-button {
+    background: transparent;
+}
+
+.modal-close-button img {
+    width: 16px;
+    height: 16px;
+}
+.title {
+    font-size: 18px;
+    font-weight: 600;
+}
+
+.cricket-modal-body {
+    font-size: 12px;
+    height: 50vh;
+    overflow: auto;
+}
+
+.cricket-modal-actions {
+    justify-content: center !important;
+    cursor: pointer;
+}
+
+.close-btn {
+    background: transparent;
+    font-size: 16px;
+    color: #1b75bb;
+    font-weight: 600;
 }

@@ -35,7 +35,7 @@ export default function CricketModal(props) {
                 </Modal.Body>
 
                 <Modal.Footer className="cricket-modal-actions" onClick={closeModal}>
-                    <button className="close-btn">Close</button>
+                    <button className="close-btn">{props.closeBtnText}</button>
                 </Modal.Footer>
             </Modal>
         </div>

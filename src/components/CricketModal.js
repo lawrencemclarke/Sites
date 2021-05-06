@@ -5,7 +5,7 @@ import './cricket-modal.css';
 
 
 
-export default function CricketModal({ modal: { id, title, state }, onArchiveTask, onPinTask }) {
+export default function CricketModal() {
     let subtitle;
     const [modalIsOpen,setIsOpen] = React.useState(false);
     function openModal() {
@@ -14,7 +14,7 @@ export default function CricketModal({ modal: { id, title, state }, onArchiveTas
 
     function afterOpenModal() {
         // references are now sync'd and can be accessed.
-        subtitle.style.color = '#f00';
+        // subtitle.style.color = '#f00';
     }
 
     function closeModal(){
@@ -23,25 +23,27 @@ export default function CricketModal({ modal: { id, title, state }, onArchiveTas
 
     return (
         <div>
-            <button className='modal-trigger' onClick={openModal}>{title}</button>
+            <button className='modal-trigger' onClick={openModal}>Test Title</button>
             <Modal
-                className='content'
+                style={{
+                    overlay: {
+                        position: 'fixed',
+                        top: 0,
+                        left: 0,
+                        right: 0,
+                        bottom: 0,
+                        backgroundColor: 'rgba(255, 255, 255, 1)'
+                    }
+                }}
+                className='content cricket-modal'
                 isOpen={modalIsOpen}
                 onAfterOpen={afterOpenModal}
                 onRequestClose={closeModal}
                 contentLabel="Example Modal"
             >
-
-                <h2 ref={_subtitle => (subtitle = _subtitle)}>Hello</h2>
+                {/*<h2 ref={_subtitle => (subtitle = _subtitle)}>Hello</h2>*/}
+                <p>This is never ending!</p>
                 <button onClick={closeModal}>close</button>
-                <div>I am a modal</div>
-                <form>
-                    <input />
-                    <button>tab navigation</button>
-                    <button>stays</button>
-                    <button>inside</button>
-                    <button>the modal</button>
-                </form>
             </Modal>
         </div>
     );

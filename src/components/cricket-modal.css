@@ -16,7 +16,28 @@
 /*    background-color: rebeccapurple;*/
 /*}*/
 
+.ReactModal--Overlay.ReactModal--Overlay--after-open {
+    background-color: rgba(0, 0, 0, 0.25) !important;
+    z-index: 99999;
+}
+
+.React__Content.ReactModal__Content--after-open.content {
+    max-width: 40%;
+    margin: 10% auto;
+}
+
 .modal-trigger{
     padding: 1rem;
     border-radius: 20px;
+}
+
+.cricket-modal{
+    border-radius: 5px;
+    box-shadow: 0 0 5px 0 rgba(64, 64, 65, 0.5);
+    width: 494px;
+    height: 489px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
 }

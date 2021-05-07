@@ -1,16 +1,21 @@
-import logo from './logo.svg';
 import './App.css';
 import CricketModal from './components/CricketModal';
+import {ContentData} from './components/content.data';
 
 const App = () => {
-  return (
-      <div>
-        <CricketModal title="Innovation Day" 
-        content="*Free Smartphones: Limited time. Eligible Devices: Samsung A01, LG Fortune 3, or Nokia C2 Tava. Must port-in & activ. new line on min. $55/mo. voice-and-data plan. First mo. svc charge & tax due at sale. Excludes upgrades and AT&T ports. Activation fee (up to $25/line in-store) & add’l one-time fees ($4 Customer Assistance Fee) may apply. See cricketwireless.com/fees. Price w/use of Mfg/Dist coupon automatically applied at checkout. By accepting Mfg/Dist coupon, customer agrees to pay all transactional tax due on item sold, including value of coupon where applicable. Transfer Number (Switch/Port), Upgrade or New Line pricing is available to customer once every 180 days. May not be combinable with certain offers, discounts, or credits. Cricket Core Data Restrictions: For content we can identify as video, streaming speed limited to max of 1.5 Mbps (Standard Definition quality, about 480p). For all data usage, Cricket may temporarily slow data speeds if the network is busy. Details on network management policies at cricketwireless.com/mobilebroadband. Data usage and tethering that violates contract terms may be slowed or terminated. Phone may be restricted to Cricket svc during first 6 months after activation. By activating/using svc, you agree to Cricket Terms of Service (cricketwireless.com/terms). Svc good for 30 days and is subject to Cricket network management policies, see cricketwireless.com/mobile broadband for details. Return Fee: $25; see cricketwireless.com/fees for details. Pricing, terms, & other restr's subject to change and may be modified or terminated at any time without notice.  Coverage & svc not avail. everywhere.  © 2021 Cricket Wireless LLC. All rights reserved."
-        closeBtnText="close"
-        />
-      </div>
-  )
-}
+    return (
+        <div>
+            <CricketModal title={ContentData.title}
+                          content={ContentData.content}
+                          closeBtnText={ContentData.closeBtnText}
+            />
+            <CricketModal
+                closeBtnText="close"
+                content={<div><form className="row g-3 needs-validation" noValidate><div className="col-md-4"><label className="form-label" htmlFor="validationCustom01">First name</label><input className="form-control" defaultValue="Mark" id="validationCustom01" required type="text"/><div className="valid-feedback">Looks good!</div></div><div className="col-md-4"><label className="form-label" htmlFor="validationCustom02">Last name</label><input className="form-control" defaultValue="Otto" id="validationCustom02" required type="text"/><div className="valid-feedback">Looks good!</div></div><div className="col-md-4"><label className="form-label" htmlFor="validationCustomUsername">Username</label><div className="input-group has-validation"><span className="input-group-text" id="inputGroupPrepend">@</span><input aria-describedby="inputGroupPrepend" className="form-control" id="validationCustomUsername" required type="text"/><div className="invalid-feedback">Please choose a username.</div></div></div><div className="col-md-6"><label className="form-label" htmlFor="validationCustom03">City</label><input className="form-control" id="validationCustom03" required type="text"/><div className="invalid-feedback">Please provide a valid city.</div></div><div className="col-md-3"><label className="form-label" htmlFor="validationCustom04">State</label><select className="form-select" id="validationCustom04" required><option defaultValue="" disabled selected>Choose...</option><option>...</option></select><div className="invalid-feedback">Please select a valid state.</div></div><div className="col-md-3"><label className="form-label" htmlFor="validationCustom05">Zip</label><input className="form-control" id="validationCustom05" required type="text"/><div className="invalid-feedback">Please provide a valid zip.</div></div><div className="col-12"><div className="form-check"><input className="form-check-input" defaultValue="" id="invalidCheck" required type="checkbox"/><label className="form-check-label" htmlFor="invalidCheck">Agree to terms and conditions</label><div className="invalid-feedback">You must agree before submitting.</div></div></div><div className="col-12"><button className="btn btn-primary" type="submit">Submit form</button></div></form></div>}
+                title="Something else"
+            />
+        </div>
+    );
+};
 
 export default App;

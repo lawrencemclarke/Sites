@@ -1,48 +1,42 @@
-import React from 'react';
-
-import CricketModal from './CricketModal';
-
-import {ContentData} from './content.data';
-import {ContentForm} from './content.form';
-
-const deform = (
+import 'bootstrap/dist/js/bootstrap.min';
+export const ContentForm = (
     <div>
         <form className="row g-3 needs-validation" noValidate>
             <div className="col-md-4">
                 <label htmlFor="validationCustom01" className="form-label">First name</label>
-                <input type="text" className="form-control" id="validationCustom01" value="Mark" required></input>
-                <div className="valid-feedback">
-                    Looks good!
-                </div>
+                <input type="text" className="form-control" id="validationCustom01" defaultValue="Mark" required></input>
+                    <div className="valid-feedback">
+                        Looks good!
+                    </div>
             </div>
             <div className="col-md-4">
                 <label htmlFor="validationCustom02" className="form-label">Last name</label>
-                <input type="text" className="form-control" id="validationCustom02" value="Otto" required></input>
-                <div className="valid-feedback">
-                    Looks good!
-                </div>
+                <input type="text" className="form-control" id="validationCustom02" defaultValue="Otto" required></input>
+                    <div className="valid-feedback">
+                        Looks good!
+                    </div>
             </div>
             <div className="col-md-4">
                 <label htmlFor="validationCustomUsername" className="form-label">Username</label>
                 <div className="input-group has-validation">
                     <span className="input-group-text" id="inputGroupPrepend">@</span>
                     <input type="text" className="form-control" id="validationCustomUsername" aria-describedby="inputGroupPrepend" required></input>
-                    <div className="invalid-feedback">
-                        Please choose a username.
-                    </div>
+                        <div className="invalid-feedback">
+                            Please choose a username.
+                        </div>
                 </div>
             </div>
             <div className="col-md-6">
                 <label htmlFor="validationCustom03" className="form-label">City</label>
                 <input type="text" className="form-control" id="validationCustom03" required></input>
-                <div className="invalid-feedback">
-                    Please provide a valid city.
-                </div>
+                    <div className="invalid-feedback">
+                        Please provide a valid city.
+                    </div>
             </div>
             <div className="col-md-3">
                 <label htmlFor="validationCustom04" className="form-label">State</label>
                 <select className="form-select" id="validationCustom04" required>
-                    <option selected disabled value="">Choose...</option>
+                    <option selected disabled defaultValue="">Choose...</option>
                     <option>...</option>
                 </select>
                 <div className="invalid-feedback">
@@ -52,19 +46,19 @@ const deform = (
             <div className="col-md-3">
                 <label htmlFor="validationCustom05" className="form-label">Zip</label>
                 <input type="text" className="form-control" id="validationCustom05" required></input>
-                <div className="invalid-feedback">
-                    Please provide a valid zip.
-                </div>
+                    <div className="invalid-feedback">
+                        Please provide a valid zip.
+                    </div>
             </div>
             <div className="col-12">
                 <div className="form-check">
-                    <input className="form-check-input" type="checkbox" value="" id="invalidCheck" required></input>
-                    <label className="form-check-label" htmlFor="invalidCheck">
-                        Agree to terms and conditions
-                    </label>
-                    <div className="invalid-feedback">
-                        You must agree before submitting.
-                    </div>
+                    <input className="form-check-input" type="checkbox" defaultValue="" id="invalidCheck" required></input>
+                        <label className="form-check-label" htmlFor="invalidCheck">
+                            Agree to terms and conditions
+                        </label>
+                        <div className="invalid-feedback">
+                            You must agree before submitting.
+                        </div>
                 </div>
             </div>
             <div className="col-12">
@@ -75,18 +69,5 @@ const deform = (
 
 )
 
-export default {
-    component: CricketModal,
-    title: 'Modal'
-};
 
-const Template = args => <CricketModal {...args} />;
 
-export const Default = Template.bind({});
-Default.args = ContentData
-
-export const Form = Template.bind({});
-Form.args = {
-        ...Default.args,
-        content: ContentForm
-};

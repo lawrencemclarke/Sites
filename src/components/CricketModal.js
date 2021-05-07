@@ -1,8 +1,5 @@
 import React from 'react';
-import {
-    Modal,
-    Button
-} from 'react-bootstrap';
+import { Modal, Button } from 'react-bootstrap';
 import './cricket-modal.css';
 import closeIcon from '../assets/icon/icon-blue-close-16x16-2x.png';
 
@@ -20,6 +17,7 @@ export default function CricketModal(props) {
     return (
         <div>
             <button className="modal-trigger" onClick={openModal}>{props.title}</button>
+            <a onClick={openModal}>{props.title}</a>
             <Modal show={modalIsOpen} onHide={closeModal}>
                 <Modal.Header className="cricket-modal-header">
                     <Modal.Title className="title">{props.title}</Modal.Title>
